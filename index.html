@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Website</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+</head>
+
+<body class="bg-color-primary text-white bg tracking-wider">
+
+
+    <header>
+        <nav class="container mx-auto flex justify-between items-center ">
+
+            <div id="Home" class="py-5 text-color-secondary font-bold text-3xl cursor-pointer ">
+                <span class="text-white">light</span>Code.
+            </div>
+            <div>
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a href="#Home" class="hover:text-color-secondary ease-in duration-300 ">Home</a></li>
+                    <li><a href="#Features" class="hover:text-color-secondary ease-in duration-300">Features</a></li>
+                    <li><a href="#Testimonial" class="hover:text-color-secondary ease-in duration-300 ">Testimonial</a>
+                    </li>
+                    <li><a href="#Pricing" class="hover:text-color-secondary ease-in duration-300 ">Pricing</a></li>
+                    <li><a href="#Blog" class="hover:text-color-secondary ease-in duration-300 ">Blog</a></li>
+                    <li><a href="#Contacts" class="hover:text-color-secondary ease-in duration-300 ">Contacts</a></li>
+
+                    <button
+                        class="bg-color-secondary px-9 py-3  rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Free
+                        Trial
+                    </button>
+                </ul>
+            </div>
+
+
+            <!-- Mobile screen -->
+
+            <div id="hamburger" class="lg:hidden cursor-pointer z-50  ">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div id="menu" class=" hidden bg-color-dark h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center p-20">
+                    <li class="hlink"><a href="" class="hover:text-color-secondary ease-in duration-300 ">Home</a>
+                    <li class="hlink"><a href="#Features"
+                            class="hover:text-color-secondary ease-in duration-300">Features</a></li>
+                    </li>
+                    <li class="hlink"><a href="#Testimonial"
+                            class="hover:text-color-secondary ease-in duration-300 ">Testimonial</a></li>
+                    <li class="hlink"><a href="#Pricing"
+                            class="hover:text-color-secondary ease-in duration-300 ">Pricing</a></li>
+                    <li class="hlink"><a href="#Blog" class="hover:text-color-secondary ease-in duration-300 ">Blog</a>
+                    </li>
+                    <li class="hlink"><a href="#Contacts"
+                            class="hover:text-color-secondary ease-in duration-300 ">Contacts</a></li>
+
+                    <button class="btn">Free
+                        Trial
+
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <!-- </header> -->
+
+        <main class="py-20 ">
+            <section>
+                <!-- <div class="w-80 h-80 bg-color-blob"></div> -->
+                <div class="container ">
+
+                    <div class="flex flex-col items-center z-20 md:flex-row py-20  w-80 h-80 bg-orange-50">
+                        <div class="text-center  mb-12 md:w-1/2 md:pr-10">
+                            <h1 class="text-3xl md:text-4xl font-bold leading-snug mb-5">Awesome Website to manage your
+                                finances</h1>
+                            <p class="leading-relaxed mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Corrupti porro facilis cupiditate
+                                odio, qui voluptatibus tenetur deleniti cum rem explicabo.</p>
+                            <button
+                                class="bg-color-secondary px-9 py-3  rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Get
+                                Our App
+                            </button>
+                        </div>
+                        <div class="md:w-1/2 rounded-md">
+                            
+                            
+                            <img src="./images/bankpig.png" alt="images" class="w-full h-auto">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        </section>
+
+        <script>
+            // mobile menu
+            const hamburger = document.querySelector('#hamburger')
+            const menu = document.querySelector('#menu');
+            const hlink = document.querySelector('#hlink');
+            const faSolid = document.querySelector('.fa-solid');
+
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark');
+            })
+
+            hlink.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    faSolid.classList.toggle('fa-xmark');
+                })
+            })
+
+        </script>
+</body>
+
+
+</html>
